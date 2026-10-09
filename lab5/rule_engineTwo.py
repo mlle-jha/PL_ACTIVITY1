@@ -363,8 +363,7 @@ class Interpreter:
         self.execute(program, self.global_env)
     def fire_rules(self):
         self.rules.sort(
-            key=lambda rule: rule["priority"],
-            reverse=True
+            key=lambda rule: rule["priority"], reverse=True
         )
         fired = []
         for rule in self.rules:
